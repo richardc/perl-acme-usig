@@ -1,0 +1,6 @@
+MANIFEST
+README
+Makefile.PL
+t/01gay.t
+t/02cool.t
+USIG.pm
