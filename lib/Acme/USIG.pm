@@ -1,7 +1,7 @@
 
 package Acme::USIG;
 use vars '$VERSION';
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 my $strict_import;
 sub gay::is  {
