@@ -1,4 +1,4 @@
 1.03	Saturday 3rd October, 2003
 	maintenance release for 5.8.1.
-	5.8.1's strict.pm is stricter about what strictures is will honour
+	5.8.1's strict.pm is stricter about what strictures it will honour
 	so now gay::is nobbles that too

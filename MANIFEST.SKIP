@@ -1,4 +1,7 @@
 ~$
+\.svn/
+^Build$
+^_build/
 blib/
 \.tar\.gz$
 \bCVS\b
