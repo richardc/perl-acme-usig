@@ -3,11 +3,22 @@ package Acme::USIG;
 use vars '$VERSION';
 $VERSION = '1.03';
 
+my $strict_import;
 sub gay::is  {
-    *strict::import = sub {};
+    $strict_import ||= \&strict::import;
+    local $^W = 0; # though it's unlikely that someone who thinks use
+                   # strict is gay would be running -w, it's worth
+                   # making sure
+
+    *strict::import = sub { $^H };
     "http://web.archive.org/web/20010714061728/http://www.cookwood.com/cgi-bin/lcastro/perlbbs.pl?read=4700"
 }
-sub cool::is { qw( vars subs refs ) }
+
+sub cool::is {
+    local $^W = 0;
+    *strict::import = $strict_import if $strict_import;
+    qw( vars subs refs )
+}
 
 1;
 __END__
