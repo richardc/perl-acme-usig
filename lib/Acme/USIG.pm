@@ -1,9 +1,12 @@
 
 package Acme::USIG;
 use vars '$VERSION';
-$VERSION = '1.02';
+$VERSION = '1.03';
 
-sub gay::is  { "http://web.archive.org/web/20010714061728/http://www.cookwood.com/cgi-bin/lcastro/perlbbs.pl?read=4700" }
+sub gay::is  {
+    *strict::import = sub {};
+    "http://web.archive.org/web/20010714061728/http://www.cookwood.com/cgi-bin/lcastro/perlbbs.pl?read=4700"
+}
 sub cool::is { qw( vars subs refs ) }
 
 1;
@@ -51,7 +54,7 @@ Richard Clamp E<lt>richardc@unixbeard.netE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2001, 2002 Richard Clamp.  All Rights Reserved.
+Copyright (C) 2001, 2002, 2003 Richard Clamp.  All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
